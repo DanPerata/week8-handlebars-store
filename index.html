@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id='product-container'>
+
+	</div>
+
+
+
+	<ul id="wishList"><h2>Your Wish List</h2>
+
+	</ul>
+
+<!-- we used the following script to append inside the product-container -->
+		<script id="handle" type="text/x-handlebars-template">
+		<div class='product'>
+			<header>
+				<h2>Title: <span class="title">{{title}}</span></h2>
+			</header>
+			<img src="{{image}}">
+			<h3>Cost: ${{cost}}</h3>
+				<button class="addButton" type="button">Add item to your wishlist</button>
+		</div>
+		</script>
+
+<!-- we used the following script to append to the ul -->
+			<script id= "wishScript" type="text/x-handlebars-template">
+		<li>   
+			<h2>{{title}}</h2>
+			<button class= 'removeButton' type="button">Remove</button>
+		</li>
+	</script>
+
+
+	<script type="text/javascript" src='products-data.js'></script>
+	<script src= "http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>	
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
